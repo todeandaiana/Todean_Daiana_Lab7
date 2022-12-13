@@ -45,4 +45,9 @@ public partial class ProductPage : ContentPage
             await Navigation.PopAsync();
         }
     }
+
+    public static implicit operator ProductPage(Product v)
+    {
+        throw new NotImplementedException();
     }
+}

@@ -37,6 +37,16 @@ namespace Todean_Daiana_Lab7.Data
         {
             return _database.Table<Product>().ToListAsync();
         }
+
+        public Task<int> DeleteListProductAsync(ListProduct listp)
+        {
+            return _database.DeleteAsync(listp);
+        }
+
+        public Task <List<ListProduct>> GetListProducts()
+        {
+            return _database.QueryAsync<ListProduct>("select * from ListProduct");
+        }
         
         public Task<List<ShopList>> GetShopListsAsync()
         {
@@ -75,6 +85,9 @@ namespace Todean_Daiana_Lab7.Data
                 return _database.InsertAsync(listp);
             }
         }
+
+
+
         public Task<List<Product>> GetListProductsAsync(int shoplistid)
         {
             return _database.QueryAsync<Product>(
@@ -85,4 +98,5 @@ namespace Todean_Daiana_Lab7.Data
         }
 
     }
-        }
+}
+        

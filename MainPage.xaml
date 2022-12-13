@@ -14,7 +14,7 @@
                 HeightRequest="200"
                 HorizontalOptions="Center" />
             <Label
-                Text="Tucker Budzyn is a beautiful Golden Retriever boy!"
+                Text="Bine ati venit!"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
