@@ -17,6 +17,14 @@ public partial class ShopPage : ContentPage
         await Navigation.PopAsync();
     }
 
+    async void OnDeleteButtonClicked(object sender, EventArgs e)
+    {
+        var shop = (Shop)BindingContext;
+        await App.Database.DeleteShopAsync(shop);
+        await Navigation.PopAsync();
+    }
+    
+
     async void OnShowMapButtonClicked(object sender, EventArgs e)
     {
         var shop = (Shop)BindingContext;

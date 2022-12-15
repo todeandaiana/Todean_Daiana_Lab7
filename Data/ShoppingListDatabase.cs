@@ -114,6 +114,12 @@ namespace Todean_Daiana_Lab7.Data
             }
         }
 
+        public Task<int> DeleteShopAsync(Shop shop)
+        {
+            return _database.DeleteAsync(shop);
+       
+        }
+
     }
 }
         
